@@ -1,0 +1,54 @@
+update:
+  check:
+    enable: true
+
+gui:
+  # 输入/imipet open时，打开什么界面
+  # 可选：null vanilla vexview
+  open: "vanilla"
+
+mysql:
+  # 是否启用数据库存储
+  enable: false
+  # 数据库链接
+  url: 'jdbc:mysql://localhost:3306/数据库名?useSSL=false'
+  # 存储数据表名
+  tableName: 'imipetsql'
+  # 数据库用户名
+  user: 'user'
+  # 数据库密码
+  password: 'password'
+
+# 禁用宠物跟随状态的世界
+disablePetWorld:
+  - secc_world
+  - uopworld
+
+# 关于宠物显示名与名称设置
+petName:
+  # 更名上限字符
+  maximum: 6
+  # 更名禁用的字符
+  disableWords:
+    - "&"
+    - "%"
+    - "sb"
+    - "垃"
+  # 更名所需经济
+  money:
+    # 是否启用
+    enable: true
+    # 需要多少经济
+    need: 100
+
+# 关于加成反应-BUFF
+buff:
+  # 刷新时间，秒
+  refreshTime: 3
+
+# 关于强制回收宠物
+takeBack:
+  # 是否开启在几秒后重新召唤宠物
+  enable: false
+  # 秒
+  time: 2

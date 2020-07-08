@@ -1,0 +1,41 @@
+update:
+  check:
+    enable: true
+mysql:
+  # Should database storing be enabled?
+  # MXBukkitLib plugin is needed if DB storing enabled.
+  enable: false
+  # Database connection URL
+  url: 'jdbc:mysql://localhost:3306/DateName?useSSL=false'
+  # Name of the imiPet's table
+  tableName: 'imipetsql'
+  # DB Username
+  user: 'user'
+  # DB Password
+  password: 'password'
+
+# Worlds name that pet-disabled.
+disablePetWorld:
+  - secc_world
+  - uopworld
+
+# Settings for pet's display name and name
+petName:
+  # Maximum characters for a pet name
+  maximum: 6
+  # Disabled words for a pet name
+  disableWords:
+    - "&"
+    - "%"
+    - "sb"
+  # Cost money for name changing
+  money:
+    enable: true
+    # How much money are needed?
+    need: 100
+# Settings for force taking back
+takeBack:
+  # Resuming pets after few seconds?
+  enable: false
+  # Seconds
+  time: 2
