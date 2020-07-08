@@ -1,0 +1,41 @@
+update:
+  check:
+    enable: true
+mysql:
+#¿Se debe habilitar el almacenamiento de la base de datos?
+#El complemento MXBukkitLib es necesario si el almacenamiento de bases de datos está habilitado.
+  enable: false
+  # URL de conexión de base de datos
+  url: 'jdbc:mysql://localhost:3306/DateName?useSSL=false'
+  # Nombre de la tabla de imiPet
+  tableName: 'imipetsql'
+  # DB Nombre de usuario
+  user: 'user'
+  # DB Contraseña de usuario
+  password: 'password'
+
+# El nombre del mundo que no se usan pets.
+disablePetWorld:
+  - secc_world
+  - uopworld
+
+# Configuraciones para el nombre para mostrar y el nombre de la mascota
+petName:
+  # Máximo de caracteres para un nombre de mascota
+  maximum: 6
+  # Palabras deshabilitadas para un nombre de mascota
+  disableWords:
+    - "&"
+    - "%"
+    - "sb"
+  # Cuesta dinero por cambiar de nombre true o false segun lo que quieras
+  money:
+    enable: true
+    # ¿Cuánto dinero se necesita?
+    need: 100
+# Configuraciones para recuperar la fuerza
+takeBack:
+  # ¿Reanudar mascotas después de unos segundos de muerto.?
+  enable: false
+  # Seconds
+  time: 2
