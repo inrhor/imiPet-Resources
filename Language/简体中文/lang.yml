@@ -12,6 +12,7 @@ COMMAND_HELP_PLAYER:
   - "&f      /imipet help   &7查看命令帮助"
   - "&f      /imipet admin   &7查看管理命令帮助"
   - "&f      /imipet open   &7打开宠物系统界面"
+  - "&f      /imipet skill open   &7打开宠物技能界面"
   - "&f      /imipet packlist   &7查看宠物背包列表"
   - "&f      /imipet whlist   &7查看宠物仓库列表"
   - "&f      /imipet expbox look   &7查看经验存储盒的经验值"
@@ -39,6 +40,7 @@ COMMAND_HELP_OP:
   - "&f      /imipet expbox set 玩家 经验值   &7设置指定玩家经验存储盒的经验值"
   - "&f      /imipet takeback 玩家   &7强制收回玩家的目标宠物"
   - "&f      /imipet lottery 玩家 模型ID 概率   &7开始宠物抽奖，概率可填0到1之间的数字"
+  - "&f      /imipet skill give 目标玩家 技能ID   &7为目标玩家的宠物新增非装载的技能"
   - "&f"
 COMMAND_NO_PERMISSION:
   - "&f"
@@ -80,6 +82,12 @@ COMMAND_EVOLUTION_PET_ERROR_FORMAT:
   - "&f   &7&l[&6&limiPet&7&l]"
   - "&f   &c&l正确格式"
   - "&f      /imipet evolution 宠物数位   &7进化指定宠物 宠物数位为1-6"
+  - "&f"
+COMMAND_SKILL_GIVE_ERROR_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /imipet skill give 目标玩家 技能ID   &7为目标玩家的宠物新增非装载的技能"
   - "&f"
 COMMAND_RIDE_PET_ERROR_FORMAT:
   - "&f"
@@ -328,3 +336,42 @@ LOTTERY_UNSUCCESSFUL_PET:
   - "&f   &7&l[&6&limiPet&7&l]"
   - "&f   &c很遗憾，你未抽中宠物奖励"
   - "&f"
+YOU_NOT_HAVE_FOLLOWING_PET:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c你没有正在跟随的宠物"
+  - "&f"
+PLAYER_NOT_HAVE_FOLLOWING_PET:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c目标没有正在跟随的宠物"
+  - "&f"
+SKILL_NOT_EXIST:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c技能ID不存在"
+  - "&f"
+PLAYER_SUCCESSFUL_ADD_UNSKILL:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &a已成功为 &6玩家&f%imipet_player% &a的 &6宠物&f%imipet_name% &a添加 &6技能%imipet_skill_name%"
+  - "&f   &a提示： &f在指定宠物的未装载界面中"
+  - "&f"
+SKILL_COOLING:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c技能&f%imipet_skill_name% 正在冷却"
+  - "&c   请等待 &f%imipet_skill_cooldown% &c秒"
+  - "&f"
+LOAD_SKILL_GUI_SLOT_FULL:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c已装载技能界面的槽位已满"
+  - "&f"
+DISSATISFY_SKILL_TRIGGER:
+  - "&f"
+  - "&f   &7&l[&6&limiPet&7&l]"
+  - "&f   &c不满足技能触发条件 &f@cause"
+  - "&f"
+SKILL_FOOD_SHORT: "&6活力值需求 &f@value"
+SKILL_PERMISSION_SHORT: "&6权限需求 &f@value"
