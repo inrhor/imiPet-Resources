@@ -247,7 +247,7 @@ GET_A_PET:
 MODELID_DOES_NOT_EXIST:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c模型ID不存在不存在"
+  - "&f   &c模型ID不存在"
   - "&f"
 DISABLE_PET_FOLLOW_WORLD:
   - "&f"
