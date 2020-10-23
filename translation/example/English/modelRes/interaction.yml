@@ -1,0 +1,32 @@
+# Interactive function
+interaction:
+  # Show pet info
+  info:
+    # enable?
+    enable: true
+    # hd or tr or cmi
+    show: tr
+    # HolographicDisplays
+    hd:
+      # Display duration (seconds)
+      stayTime: 6
+      stringList:
+        - "&fName： %imipet_name%"
+        - "&fHP %imipet_nowhp%&7/&f%imipet_maxhp%"
+      # Hologram location
+      x: 1
+      y: 1
+      z: 0
+    # TrHologram
+    tr:
+      stayTime: 6
+      stringList:
+        - 'item:<head:%player_name%>'
+        - '&bName %animations_glow?normal=&8&l,start=&3&l,middle=&b&l,end=&3&l,size=5_%imipet_name%%<update:3>'
+        - ''
+        - '&cLevel %animations_pulse?color=cyan_%imipet_level%%<update:10>'
+        - ''
+        - '&e%animations_typewriter?pause=3,reverse=true_Look!WoW%<update:5>'
+      x: 1
+      y: 3
+      z: 0

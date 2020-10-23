@@ -1,3 +1,70 @@
+LOADER:
+  INFO:
+    - "&7&l[ &c&li &7&l]&r  ┝  &3正在加载插件  &f{1}"
+    - "&7&l[ &c&li &7&l]&r  ┝  &3当前插件版本  &f{2}"
+    - "&7&l[ &c&li &7&l]&r  ┝  &3选择语言文本  &f{3}"
+    - "&7&l[ &c&li &7&l]&r  ┝  &3数据存储方式  &f{4}"
+    - "&7&l[ &c&li &7&l]&r  ┝  &6检查软依赖"
+  PREMIUM: "&7&l[ &c&li &7&l]&r &c当前&fimiPet&c插件是体验版，最多只能注册三个模型"
+  PLUGIN:
+    ENABLE: "&a已启用"
+    DISABLE: "&c未启用"
+    PlaceholderAPI: "&7&l[ &c&li &7&l]&r  ┝  &fPlaceholderAPI  {0}"
+    Vault: "&7&l[ &c&li &7&l]&r  ┝  &fVault  {0}"
+    HolographicDisplays: "&7&l[ &c&li &7&l]&r  ┝  &fHolographicDisplays  {0}"
+    TrHologram: "&7&l[ &c&li &7&l]&r  ┝  &fTrHologram {0}"
+    CMI: "&7&l[ &c&li &7&l]&r  ┝  &fCMI  {0}"
+    AttributePlus: "&7&l[ &c&li &7&l]&r  ┝  &fAttributePlus  {0}"
+    MythicMobs: "&7&l[ &c&li &7&l]&r  ┝  &fMythicMobs  {0}"
+    ModelEngine: "&7&l[ &c&li &7&l]&r  ┝  &fModelEngine  {0}"
+    VexView: "&7&l[ &c&li &7&l]&r  ┝  &fVexView  {0}"
+
+COMMAND_DESCRIPTION:
+  RELOAD: "重载配置"
+  OPEN: "打开宠物背包界面"
+  SKILL_OPEN: "打开跟随的宠物的技能触发器界面"
+  TAKE_BACK: "强制收回玩家的宠物"
+  PACK_LIST: "查看宠物背包列表"
+  WAREHOUSE_LIST: "查看宠物仓库列表"
+  PET_GIVE: "给予宠物"
+  EXP_BOX_LOOK: "查看经验存储盒的经验值"
+  EXP_BOX_SET: "设置经验存储盒的经验值"
+  EXP_BOX_ADD: "增加经验存储盒的经验值"
+  EXP_BOX_DEL: "减少经验存储盒的经验值"
+  FOLLOW: "召唤或收回宠物"
+  RIDE: "骑行正在跟随的宠物"
+  RELEASE: "放生宠物"
+  CURE: "治疗宠物"
+  FOOD: "喂养宠物"
+  EVOLUTION: "进化指定宠物"
+  RENAME: "为指定宠物更改名称"
+  INTO: "将指定仓库的宠物放入背包"
+  TRANSFER: "转交指定宠物给其它玩家"
+  LOTTERY: "宠物抽奖"
+  VAR:
+    MODEL_ID: "模型ID"
+    PLAYER: "玩家"
+    PACK_SLOT: "宠物背包槽位"
+    WAREHOUSE_SLOT: "宠物仓库槽位"
+    INT: "整数值"
+    NEW_NAME: "新名称"
+
+PACK:
+  NOT_EXIST_PACK_FILE:
+    - "&f"
+    - "&f   &7&l[&6&limiPet&7&l]"
+    - "&f   &c不存在文件夹 &fmodels/{0}/pack"
+    - "&f   &c不能自动生成该模型的纹理资源包"
+    - "&f"
+  NOT_EXIST_PACK_JSON:
+    - "&f"
+    - "&f   &7&l[&6&limiPet&7&l]"
+    - "&f   &c不存在文件 &fmodels/{0}/pack/{1}.json"
+    - "&f   &c不能自动生成该模型的纹理资源包"
+    - "&f"
+
+
+
 COMMAND_CONSOLE:
   - "&c不可以在控制台使用该命令"
 COMMAND_RELOAD:
@@ -5,102 +72,10 @@ COMMAND_RELOAD:
   - "&f   &7&l[&6&limiPet&7&l]"
   - "&f   &a已重载配置"
   - "&f"
-COMMAND_HELP_PLAYER:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a&l命令帮助"
-  - "&f      /imipet help   &7查看命令帮助"
-  - "&f      /imipet admin   &7查看管理命令帮助"
-  - "&f      /imipet open   &7打开宠物系统界面"
-  - "&f      /imipet skill open   &7打开宠物技能界面"
-  - "&f      /imipet packlist   &7查看宠物背包列表"
-  - "&f      /imipet whlist   &7查看宠物仓库列表"
-  - "&f      /imipet expbox look   &7查看经验存储盒的经验值"
-  - "&f      /imipet follow 宠物数位   &7召唤或收回指定宠物 宠物数位为1-6"
-  - "&f      /imipet cure 宠物数位 回血量数   &7治疗指定宠物 宠物数位为1-6"
-  - "&f      /imipet food 宠物数位 回复活力数   &7喂养指定宠物 宠物数位为1-6"
-  - "&f      /imipet givepetexp 宠物数位 给定经验数   &7给予经验给指定宠物 宠物数位为1-6"
-  - "&f      /imipet rename 宠物数位 新名称   &7为宠物更改新名称 宠物数位为1-6"
-  - "&f      /imipet evolution 宠物数位   &7进化指定宠物 宠物数位为1-6"
-  - "&f      /imipet ride   &7骑行正在跟随的宠物"
-  - "&f      /imipet ride 宠物数位   &7骑行指定宠物 宠物数位为1-6"
-  - "&f      /imipet into 仓库宠物数位(无限) 背包宠物数位(1-6/可选填)   &7将指定仓库的宠物放入背包"
-  - "&c      /imipet transfer 宠物数位 目标玩家   &7转让指定宠物给指定玩家 宠物数位为1-6"
-  - "&c      /imipet release 宠物数位   &7放生指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_HELP_OP:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l管理-命令帮助"
-  - "&f      /imipet pet give 玩家 模型ID   &7给予指定玩家一个宠物"
-  - "&f      /imipet release 玩家 宠物数位   &7放生玩家的目标宠物 宠物数位为1-6"
-  - "&f      /imipet expbox look 玩家   &7查看指定玩家经验存储盒的经验值"
-  - "&f      /imipet expbox give 玩家 经验值   &7给予指定玩家经验存储盒的经验值"
-  - "&f      /imipet expbox del 玩家 经验值   &7扣除指定玩家经验存储盒的经验值"
-  - "&f      /imipet expbox set 玩家 经验值   &7设置指定玩家经验存储盒的经验值"
-  - "&f      /imipet takeback 玩家   &7强制收回玩家的目标宠物"
-  - "&f      /imipet lottery 玩家 模型ID 概率   &7开始宠物抽奖，概率可填0到1之间的数字"
-  - "&f      /imipet skill give 目标玩家 技能ID   &7为目标玩家的宠物新增非装载的技能"
-  - "&f"
 COMMAND_NO_PERMISSION:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
   - "&f   &C没有足够的权限使用"
-  - "&f"
-COMMAND_FOLLOW_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet follow 宠物数位   &7召唤或收回指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_RELEASE_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet release 宠物数位   &7放生指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_CURE_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet cure 宠物数位 回血量数   &7治疗指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_FOOD_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet food 宠物数位 回复活力数   &7喂养指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_EXP_GIVE_PET_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet givepetexp 宠物数位 给定经验数   &7给予经验给指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_EVOLUTION_PET_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet evolution 宠物数位   &7进化指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_SKILL_GIVE_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l正确格式"
-  - "&f      /imipet skill give 目标玩家 技能ID   &7为目标玩家的宠物新增非装载的技能"
-  - "&f"
-COMMAND_RIDE_PET_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c没有宠物正在跟随"
-  - "&f   &c&l请输入"
-  - "&f      /imipet ride 宠物数位   &7骑行指定宠物 宠物数位为1-6"
-  - "&f"
-COMMAND_INTO_ERROR_FORMAT:
-  - "&f"
-  - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c&l请输入"
-  - "&f      /imipet into 仓库宠物数位(无限) 背包宠物数位(1-6/可选填)   &7将指定仓库的宠物放入背包"
   - "&f"
 COMMAND_EXPBOX_LOOK:
   - "&f"
@@ -242,12 +217,12 @@ PLAYER_IS_NOT_ONLINE:
 GET_A_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a获得了一只宠物： &f%imipet_name%"
+  - "&f   &a获得了一只宠物： &f{0}"
   - "&f"
 MODELID_DOES_NOT_EXIST:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c模型ID不存在"
+  - "&f   &c模型ID不存在不存在"
   - "&f"
 DISABLE_PET_FOLLOW_WORLD:
   - "&f"
@@ -299,7 +274,7 @@ CAN_NOT_SELF:
 SUCCESSFULLY_GIVE_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a已给予宠物给 &f%imipet_player%"
+  - "&f   &a已给予宠物给 &f{0}"
   - "&f"
 SUCCESSFULLY_PUT_IN_PACK:
   - "&f"
@@ -329,7 +304,7 @@ NOT_IS_NUMBER_CHANCE:
 LOTTERY_WINNING_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a恭喜你抽中宠物奖励： &f%imipet_name%"
+  - "&f   &a恭喜你抽中宠物奖励： &f{0}"
   - "&f"
 LOTTERY_UNSUCCESSFUL_PET:
   - "&f"
@@ -354,7 +329,7 @@ SKILL_NOT_EXIST:
 PLAYER_SUCCESSFUL_ADD_UNSKILL:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a已成功为 &6玩家&f%imipet_player% &a的 &6宠物&f%imipet_name% &a添加 &6技能%imipet_skill_name%"
+  - "&f   &a已成功为 &6玩家&f{0} &a的 &6宠物&f{1} &a添加 &6技能{2}"
   - "&f   &a提示： &f在指定宠物的未装载界面中"
   - "&f"
 SKILL_COOLING:

@@ -5,14 +5,6 @@ modelId: "test"
 modelEngine:
   use: false
   animation:
-    # 空闲状态
-    idle:
-      # 到多少tick使动画重新开始
-      retime: 40
-    # 行走状态
-    walk:
-      # 到多少tick使动画重新开始
-      retime: 45
     # 攻击状态
     attack:
       # 到多少tick使动画重新开始
