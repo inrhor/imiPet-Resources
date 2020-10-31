@@ -47,3 +47,8 @@ animation:
     material: "DIAMOND_HOE"
     # 显示攻击动作动态时长，秒
     time: 5
+
+# 其它
+entity:
+  # 真实实体是否可见，默认不可见
+  visible: false

@@ -44,3 +44,8 @@ animation:
     material: "DIAMOND_HOE"
     # Display the dynamic duration of the attack action, in seconds
     time: 5
+
+# Other
+entity:
+  # Whether the real entity is visible, invisible by default
+  visible: false
