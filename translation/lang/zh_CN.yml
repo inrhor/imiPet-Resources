@@ -5,7 +5,6 @@ LOADER:
     - "&7&l[ &c&li &7&l]&r  ┝  &3选择语言文本  &f{3}"
     - "&7&l[ &c&li &7&l]&r  ┝  &3数据存储方式  &f{4}"
     - "&7&l[ &c&li &7&l]&r  ┝  &6检查软依赖"
-  PREMIUM: "&7&l[ &c&li &7&l]&r &c当前&fimiPet&c插件是体验版，最多只能注册三个模型"
   PLUGIN:
     ENABLE: "&a已启用"
     DISABLE: "&c未启用"
@@ -80,12 +79,12 @@ COMMAND_NO_PERMISSION:
 COMMAND_EXPBOX_LOOK:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f      经验存储盒当前值： %imipet_expbox%"
+  - "&f      经验存储盒当前值： {0}"
   - "&f"
 COMMAND_EXPBOX_LOOK_OP:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f      该玩家经验存储盒当前值： %imipet_expbox%"
+  - "&f      该玩家经验存储盒当前值： {0}"
   - "&f"
 COMMAND_PET_LIST: "&a宠物背包列表："
 COMMAND_WAREHOUSE_LIST: "&a宠物仓库列表："
@@ -102,14 +101,14 @@ NOT_INT:
 MONEY_ADD_HP:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a成功为宠物回复了 &f%imipet_addHP% &a血量"
-  - "&f   花费了 &6%imipet_needMoney% &f经济"
+  - "&f   &a成功为宠物回复了 &f{0} &a血量"
+  - "&f   花费了 &6{1} &f经济"
   - "&f"
 MONEY_ADD_FOOD:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a成功为宠物补充了 &f%imipet_addFood% &a活力"
-  - "&f   花费了 &6%imipet_needMoney% &f经济"
+  - "&f   &a成功为宠物补充了 &f{0}&a活力"
+  - "&f   花费了 &6{1} &f经济"
   - "&f"
 NOT_ENOUGH_MONEY:
   - "&f"
@@ -160,13 +159,13 @@ PET_DOES_NOT_EXIST:
 GIVE_EXP_TO_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   该宠物获得了 &a%imipet_give_exp% &f经验值"
-  - "&f   当前经验为 %imipet_nowexp%/%imipet_maxexp%"
+  - "&f   该宠物获得了 &a{0} &f经验值"
+  - "&f   当前经验为 {1}/{2}"
   - "&f"
 PET_LEVEL_UP:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   该宠物升级到 &a%imipet_level% &f级了"
+  - "&f   该宠物升级到 &a{0} &f级了"
   - "&f"
 EXPBOX_NOT_ENOUGH_EXP:
   - "&f"
@@ -247,7 +246,7 @@ EXIST_DISABLE_WORD:
 SUCCESSFULLY_RENAMED:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a已成功为宠物更名为 &f%imipet_name%"
+  - "&f   &a已成功为宠物更名为 &f{0}"
   - "&f"
 PAPI_FOLLOWING: "&f跟随中"
 PAPI_NOT_FOLLOWING: "&7未跟随"
@@ -259,12 +258,12 @@ PET_NO_HP:
 SUCCESSFULLY_TRANSFER_PET_TO_NEWOWNER:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a已成功将 &f%imipet_name% &a转交给 &f%newowner_name%"
+  - "&f   &a已成功将 &f{0} &a转交给 &f{1}"
   - "&f"
 SUCCESSFULLY_TRANSFER_PET_FROM_OLDOWNER:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &a已收到来自 &f%oldowner_name% &a转交给你的宠物 &f%imipet_name%"
+  - "&f   &a已收到来自 &f{0} &a转交给你的宠物 &f{1}"
   - "&f"
 CAN_NOT_SELF:
   - "&f"
@@ -335,8 +334,8 @@ PLAYER_SUCCESSFUL_ADD_UNSKILL:
 SKILL_COOLING:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c技能&f%imipet_skill_name% 正在冷却"
-  - "&c   请等待 &f%imipet_skill_cooldown% &c秒"
+  - "&f   &c技能&f{0} 正在冷却"
+  - "&c   请等待 &f{1} &c秒"
   - "&f"
 LOAD_SKILL_GUI_SLOT_FULL:
   - "&f"
@@ -346,7 +345,7 @@ LOAD_SKILL_GUI_SLOT_FULL:
 DISSATISFY_SKILL_TRIGGER:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &c不满足技能触发条件 &f@cause"
+  - "&f   &c不满足技能触发条件 &f{0}"
   - "&f"
-SKILL_FOOD_SHORT: "&6活力值需求 &f@value"
-SKILL_PERMISSION_SHORT: "&6权限需求 &f@value"
+SKILL_FOOD_SHORT: "&6活力值需求 &f{0}"
+SKILL_PERMISSION_SHORT: "&6权限需求 &f{0}"

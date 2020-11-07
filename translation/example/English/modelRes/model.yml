@@ -37,7 +37,7 @@ animation:
     itemName: "§a"
     customModelData: 10001
     material: "DIAMOND_HOE"
-  # 攻击状态
+  # attack state
   attack:
     itemName: "§5"
     customModelData: 10002

@@ -5,7 +5,6 @@ LOADER:
     - "&7&l[ &c&li &7&l]&r  ┝  &3Language  &f{3}"
     - "&7&l[ &c&li &7&l]&r  ┝  &3Data storage method  &f{4}"
     - "&7&l[ &c&li &7&l]&r  ┝  &6Check softLib"
-  PREMIUM: "&7&l[ &c&li &7&l]&r &cFor imiPet non-Premium, you can only register 3 models"
   PLUGIN:
     ENABLE: "&aYES"
     DISABLE: "&cNO"
@@ -73,12 +72,12 @@ COMMAND_NO_PERMISSION:
 COMMAND_EXPBOX_LOOK:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f      Exps of the expbox: %imipet_expbox%"
+  - "&f      Exps of the expbox: {0}"
   - "&f"
 COMMAND_EXPBOX_LOOK_OP:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f      Exps of the player's expbox: %imipet_expbox%"
+  - "&f      Exps of the player's expbox: {0}"
   - "&f"
 COMMAND_PET_LIST: '&apet Backpacks list:'
 COMMAND_WAREHOUSE_LIST: '&apet Depositories list:'
@@ -95,14 +94,14 @@ NOT_INT:
 MONEY_ADD_HP:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aSuccessfully healed &f%imipet_addHP% &aHP for pet"
-  - "&f   Spent &6%imipet_needMoney% &feconomy"
+  - "&f   &aSuccessfully healed &f{0} &aHP for pet"
+  - "&f   Spent &6{1} &feconomy"
   - "&f"
 MONEY_ADD_FOOD:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aSuccessfully supplied &f%imipet_addFood% &aenergy for pet"
-  - "&f   Spent &6%imipet_needMoney% &feconomy"
+  - "&f   &aSuccessfully supplied &f{0} &aenergy for pet"
+  - "&f   Spent &6{1} &feconomy"
   - "&f"
 NOT_ENOUGH_MONEY:
   - "&f"
@@ -153,13 +152,13 @@ PET_DOES_NOT_EXIST:
 GIVE_EXP_TO_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   This pet gained &a%imipet_give_exp% &fexps"
-  - "&f   Currently %imipet_nowexp%/%imipet_maxexp%"
+  - "&f   This pet gained &a{0} &fexps"
+  - "&f   Currently {1}/{2}"
   - "&f"
 PET_LEVEL_UP:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   Pet upgraded to level &a%imipet_level% &f."
+  - "&f   Pet upgraded to level &a{0} &f."
   - "&f"
 EXPBOX_NOT_ENOUGH_EXP:
   - "&f"
@@ -210,7 +209,7 @@ PLAYER_IS_NOT_ONLINE:
 GET_A_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aGot a pet: &f%imipet_name%"
+  - "&f   &aGot a pet: &f{0}"
   - "&f"
 MODELID_DOES_NOT_EXIST:
   - "&f"
@@ -240,7 +239,7 @@ EXIST_DISABLE_WORD:
 SUCCESSFULLY_RENAMED:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aSuccessfully renamed the pet to &f%imipet_name%"
+  - "&f   &aSuccessfully renamed the pet to &f{0}"
   - "&f"
 PAPI_FOLLOWING: '&fFollowing'
 PAPI_NOT_FOLLOWING: '&7Not following'
@@ -252,12 +251,12 @@ PET_NO_HP:
 SUCCESSFULLY_TRANSFER_PET_TO_NEWOWNER:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aSuccessfully transferred &f%imipet_name% &a to &f%newowner_name%"
+  - "&f   &aSuccessfully transferred &f{0} &a to &f{1}"
   - "&f"
 SUCCESSFULLY_TRANSFER_PET_FROM_OLDOWNER:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aReceived pet &f%imipet_name% &afrom &f%oldowner_name%"
+  - "&f   &aReceived pet &f{0} &afrom &f{1}"
   - "&f"
 CAN_NOT_SELF:
   - "&f"
@@ -267,7 +266,7 @@ CAN_NOT_SELF:
 SUCCESSFULLY_GIVE_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aGiven to pet &f%imipet_player%"
+  - "&f   &aGiven to pet &f{0}"
   - "&f"
 SUCCESSFULLY_PUT_IN_PACK:
   - "&f"
@@ -297,7 +296,7 @@ NOT_IS_NUMBER_CHANCE:
 LOTTERY_WINNING_PET:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aCongratulations on your winning pet reward： &f%imipet_name%"
+  - "&f   &aCongratulations on your winning pet reward： &f{0}"
   - "&f"
 LOTTERY_UNSUCCESSFUL_PET:
   - "&f"
@@ -322,14 +321,14 @@ SKILL_NOT_EXIST:
 PLAYER_SUCCESSFUL_ADD_UNSKILL:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &aSuccessfully added skill &f%imipet_skill_name% &afor player &f%imipet_player%&a’s pet &f%imipet_name%"
+  - "&f   &aSuccessfully added skill &f{0} &afor player &f{1}&a’s pet &f{2}"
   - "&f   &aTip: &f is in the unloaded skill gui of the specified pet"
   - "&f"
 SKILL_COOLING:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &cSkill&f%imipet_skill_name% Cooling"
-  - "&c   Please wait &f%imipet_skill_cooldown% &csecond"
+  - "&f   &cSkill&f{0} Cooling"
+  - "&c   Please wait &f{1} &csecond"
   - "&f"
 LOAD_SKILL_GUI_SLOT_FULL:
   - "&f"
@@ -339,7 +338,7 @@ LOAD_SKILL_GUI_SLOT_FULL:
 DISSATISFY_SKILL_TRIGGER:
   - "&f"
   - "&f   &7&l[&6&limiPet&7&l]"
-  - "&f   &cDoes not meet skill trigger conditions &f@cause"
+  - "&f   &cDoes not meet skill trigger conditions &f{0}"
   - "&f"
-SKILL_FOOD_SHORT: '&6Food requirements &f@value'
-SKILL_PERMISSION_SHORT: '&6Permission requirements &f@value'
+SKILL_FOOD_SHORT: '&6Food requirements &f{0}'
+SKILL_PERMISSION_SHORT: '&6Permission requirements &f{0}'
